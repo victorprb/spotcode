@@ -3,6 +3,7 @@ services:
   web:
     build: .
     volumes:
+      - app_bundler_data:/app/vendor/
       - .:/app
     ports:
       - "3000:3000"
@@ -15,4 +16,5 @@ services:
       - postgresql_data
 
 volumes:
+  app_bundler_data:
   postgresql_data:
